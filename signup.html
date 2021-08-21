@@ -2,64 +2,92 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Inter');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Inter');
+
+    a{
+    text-decoration: none;
+    color: rgb(19,65,225);
+    }
+
+    a:visited{
+    text-decoration: none;
+    color: rgb(19,65,225);
+    }
+    
+    .br {
+      margin-bottom: 3em
+    }
 
     body {background-color: rgb(237, 237, 237);}
+
     h1 {text-align:center;
-        font-size:100px;
+        font-size:4vw;
         font-family: Poppins;
         color:rgb(19,65,225);
         }
     h2 {
-        font-size:60px;
+        font-size: 3vw;;
+        font-family:Inter;
         color:rgb(105,65,64)
-
-
         }
     p {font-size:30px;
-        color:rgb(105,65,64)
-        }
-
+      font-family: Inter;
+      font-size:1.5vw;
+      color:rgb(105,65,64)
+      }
+    /*Navigation Bar start*/
     ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(19,65,225);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20ch;
+    background-color: rgb(19,65,225);
         }
 
-li {
-  float: left;
-    }
+    li {
+    float: left;
+      }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-    }
 
-li a:hover {
-  background-color: #111111;
-            }
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+      }
+
+    li a:hover {
+    background-color: #111111;
+              }
+
+    li a:visited{
+    color:rgb(237, 237, 237);
+    }
+/* Navigation bar end*/
 </style>
 
-<title>EduMatch</title>
+<title>EduMatch Homepage</title>
 </head>
 <body>
 
-<h1 >EduMatch</h1>
-<ul>
+<h1> <a href="homepage.html">EduMatch</a></h1>
+<ul class='br'>
     <li><a href="subjects.html">Subjects</a></li><!---might delete?-->
     <li><a href="tutors.html">Tutors</a></li><!---might delete?-->
-    <li><a href="login.html">Login</a></li>
-    <li><a href="signup.html">Sign up</a></li>
+    <li style="float:right"><a href="signup.html">Sign Up</a></li>
+    <li style="float:right"><a href="login.html">Login</a></li>
 </ul>
+
 <h2>Sign Up</h2>
-<p >Start your learning education by finding the right tutor</p>
+<p>Start your learning education by finding the right tutor
+</p>
 
 </body>
 </html>
