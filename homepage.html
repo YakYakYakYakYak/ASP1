@@ -9,7 +9,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Inter');
 
-  a{
+    a{
     text-decoration: none;
     color: rgb(19,65,225);
     }
@@ -20,6 +20,7 @@
     }
 
     body {background-color: rgb(237, 237, 237);}
+
     h1 {text-align:center;
         font-size:4vw;
         font-family: Poppins;
@@ -33,30 +34,36 @@
       font-family: Inter;
       font-size:1.5vw;
       }
-
+    /*Navigation Bar start*/
     ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(19,65,225);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(19,65,225);
         }
 
-li {
-  float: left;
-    }
+    li {
+    float: left;
+      }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-    }
 
-li a:hover {
-  background-color: #111111;
-            }
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+      }
+
+    li a:hover {
+    background-color: #111111;
+              }
+
+    li a:visited{
+    color:rgb(237, 237, 237);
+    }
+/* Navigation bar end*/
 </style>
 
 <title>EduMatch Homepage</title>
@@ -67,8 +74,8 @@ li a:hover {
 <ul>
     <li><a href="subjects.html">Subjects</a></li><!---might delete?-->
     <li><a href="tutors.html">Tutors</a></li><!---might delete?-->
-    <li><a href="login.html">Login</a></li>
-    <li><a href="signup.html">Sign up</a></li>
+    <li style="float:right"><a href="signup.html">Sign Up</a></li>
+    <li style="float:right"><a href="login.html">Login</a></li>
 </ul>
 
     <img src="imgs\homepagestockimg.jpeg" alt="pic of happy people studying" style="width: 100%;">
