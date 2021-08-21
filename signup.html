@@ -46,7 +46,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border-radius: 20ch;
+    border-radius: 10ch;
     background-color: rgb(19,65,225);
         }
 
@@ -71,6 +71,88 @@
     color:rgb(237, 237, 237);
     }
 /* Navigation bar end*/
+
+/*student tutor btn*/
+.btn-group button {
+  background-color: white;  
+  border-radius: 12px;
+  padding: 10px 24px; 
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-family: Inter;
+  position: relative;
+  margin: 0;
+  top: 40%;
+  left: 40%;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: rgb(19,65,225);
+  border: 2px solid black;
+}
+
+/*student tutor btn end*/
+
+/* Sign Up form*/
+* {
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: white;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: rgb(19,65,225);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: rgb(237, 237, 237);
+  text-align: center;
+}
+/* Sign Up form End*/
 </style>
 
 <title>EduMatch Homepage</title>
@@ -86,8 +168,32 @@
 </ul>
 
 <h2>Sign Up</h2>
-<p>Start your learning education by finding the right tutor
-</p>
+<p>Start your learning education by finding the right tutor</p>
+
+<div class="btn-group" style="width:100%">
+  <button style="width:10%">Student</button>
+  <button style="width:10%">Tutor</button>
+</div>
+
+<form action="/action_page.php">
+  <div class="container">
+
+    <label for="email"></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+    <button type="submit" class="registerbtn">Sign Up</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</form>
 
 </body>
 </html>
