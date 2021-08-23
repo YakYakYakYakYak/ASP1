@@ -1,0 +1,8 @@
+CREATE TABLE account(
+	accountid int NOT NULL AUTO_INCREMENT,
+	email varchar(255) NOT NULL,
+	password varchar(255) NOT NULL,	
+	age int NOT NULL,
+	accounttype ENUM('tutor', 'student') NOT NULL,
+	PRIMARY KEY (accountid)
+);
