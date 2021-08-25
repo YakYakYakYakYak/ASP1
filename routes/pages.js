@@ -29,12 +29,11 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
     }
 });
 
-
 //check token, render token else redirect to login.
-router.get('/mainpage', authController.isLoggedIn, (req, res) => {
+router.get('/browse', authController.isLoggedIn, (req, res) => {
 
     if(req.user) {
-        res.render('mainpage', {
+        res.render('browse', {
             user:req.user
         });
     } else {
