@@ -38,5 +38,5 @@ app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes//auth'));
 
 app.listen(5002, () => {
-    console.log("Server started on port 5001");
+    console.log("Server started on port 5002");
 })

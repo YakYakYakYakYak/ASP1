@@ -29,4 +29,17 @@ router.get('/profile', authController.isLoggedIn, (req, res) => {
     }
 });
 
+
+//check token, render token else redirect to login.
+router.get('/mainpage', authController.isLoggedIn, (req, res) => {
+
+    if(req.user) {
+        res.render('mainpage', {
+            user:req.user
+        });
+    } else {
+        res.redirect('/login');
+    }
+});
+
 module.exports = router;
