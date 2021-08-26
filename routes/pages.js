@@ -44,7 +44,7 @@ router.get('/browse', (req, res) => {
             res.redirect('/');
         }
         console.log('test');
-        console.log(result);
+        console.log(result.length);
         
         res.render('browse', {
             user:result[4]

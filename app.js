@@ -3,6 +3,7 @@ const path = require("path");
 const mysql = require("mysql");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
+const portNumber = 5002;
 
 dotenv.config({ path: './.env'});
 
@@ -37,6 +38,6 @@ db.connect( (error) => {
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes//auth'));
 
-app.listen(5002, () => {
-    console.log("Server started on port 5002");
+app.listen(portNumber, () => {
+    console.log("Server started on port: " + portNumber);
 })
