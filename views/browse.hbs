@@ -21,6 +21,7 @@
 
     <h2>Filter By:</h2>
 
+
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('jeremy')"> jeremy</button>
@@ -28,7 +29,33 @@
   <button class="btn" onclick="filterSelection('daniel')"> daniel</button>
 </div>
 
+
+<!-- //Trying to do a drop down filter 
+<div class="dropdown">
+  <button>HubSpot Resources</button>
+  <div class="dropdown-content">
+  <a href="https://blog.hubspot.com/">Blog</a>
+  <a href="https://academy.hubspot.com/">Academy</a>
+  <a href="https://www.youtube.com/user/hubspot">YouTube</a>
+  </div>
+</div>
+-->
+
+<style>
+  .box{position:relative;
+       width:850px;
+       height:350px;
+       border-radius: 25px;
+       padding:20px;
+       margin:100px auto;
+       border:10px;
+       background-color: #797675;}
+       
+</style>
+
+
 {{#each user}}
+<div class="box">
     <div class="abc {{name}}">
         <div class="row">
             <div class="col-2">
@@ -43,6 +70,7 @@
             </div>
             </div>
             </div>
+            <br><br>
           <div class="col-8">
                  <div class="card text-center">
                      <div class="card-header">
@@ -60,9 +88,9 @@
             </div>
         </div>    
 </div>
-
-
+</div>
 {{/each}}
+
 
 
 
