@@ -19,7 +19,7 @@
         </ul>
     </nav>>
 
-    <h2>Filter DIV Elements</h2>
+    <h2>Filter By:</h2>
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
@@ -43,10 +43,28 @@
             </div>
             </div>
             </div>
+          <div class="col-8">
+                 <div class="card text-center">
+                     <div class="card-header">
+                         Tutor Details
+                     </div>
+                     <div class="card-body">
+                         <h5 class="card-title">Hey {{user.name}} welcome back</h5>
+                         <p class="card-text">This is your profile page where u can add information about yourself</p>
+                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                     </div>
+                     <div class="card-footer text-muted">
+                         bla bla bla
+                     </div>
+                 </div>
+            </div>
         </div>    
 </div>
-    </div>
+
+
 {{/each}}
+
+
 
     <script>
 filterSelection("all")
