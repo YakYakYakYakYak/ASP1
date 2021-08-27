@@ -73,6 +73,13 @@ nav li a:hover {
 .abc {
     display: none;
     color: black;
+    border-radius: 15px;
+    background: #707070;
+    padding: 20px;
+    width: 1500px;
+    height: 400px;
+    align-items:center;
+    
   }
   
   .show {
@@ -100,3 +107,12 @@ nav li a:hover {
     background-color: rgb(19,65,225);
     color: white;
   }
+
+  .box{position:relative;
+       width:850px;
+       height:350px;
+       border-radius: 25px;
+       padding:20px;
+       margin:100px auto;
+       border:10px;
+       background-color: #797675;}
