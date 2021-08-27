@@ -61,10 +61,7 @@ router.post('/profile', authController.isLoggedIn, (req, res) => {
             console.log(error)
         } else {
             console.log(result);
-                return res.render('profile', {
-                    message: 'Message updated',
-                    user:result
-                });
+                return res.redirect('profile');
         }
     })
 });
