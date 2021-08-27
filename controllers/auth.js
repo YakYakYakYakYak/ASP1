@@ -53,15 +53,8 @@ exports.login = async (req, res) => {
 
 exports.register = (req, res) => {
     console.log(req.body);
-    /*
-    const name = req.body.name;
-    const email = req.body.email;
-    const password = req.body.password;
-    const passwordConfirm = req.body.passwordConfirm;
-    */
-    //destructuring above code to be neater
 
-    const { name, email, password, passwordConfirm, subject, location} = req.body;
+    const { name, email, password, passwordConfirm, subject, location, ratingCount, rating, review, message} = req.body;
 
     db.query('SELECT email FROM users WHERE email = ?', [email], async (error, results) => {
         if(error) {
@@ -81,7 +74,7 @@ exports.register = (req, res) => {
         let hashedPassword = await bcrypt.hash(password, 8);
         console.log(hashedPassword);
 
-        db.query('INSERT INTO users SET ?', {name:name, email:email, password:hashedPassword, subject:subject, location:location}, (error, results) => {
+        db.query('INSERT INTO users SET ?', {name:name, email:email, password:hashedPassword, subject:subject, location:location, ratingCount:0, rating:0, review:"", message:""}, (error, results) => {
             if(error) {
                 console.log(error);
             } else {
@@ -96,7 +89,6 @@ exports.register = (req, res) => {
 }
 
 exports.isLoggedIn = async (req, res, next) => {
-    //console.log(req.cookies);
     if(req.cookies.jwt) {
         try {
             //1) verifying the token

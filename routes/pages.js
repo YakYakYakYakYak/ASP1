@@ -43,13 +43,30 @@ router.get('/browse', (req, res) => {
         if(error) {
             res.redirect('/');
         }
-        console.log('test');
-        console.log(result.length);
         
         res.render('browse', {
             user:result
         });
     })            
 })
+
+router.post('/profile', authController.isLoggedIn, (req, res) => {
+    const message = req.body.message;
+    const id = req.user.id;
+    console.log('testing!');
+    console.log(message);
+    console.log(id);
+    db.query("UPDATE users SET message = ? WHERE id = ?", [message, id], (error, result) => {
+        if(error) {
+            console.log(error)
+        } else {
+            console.log(result);
+                return res.render('profile', {
+                    message: 'Message updated',
+                    user:result
+                });
+        }
+    })
+});
 
 module.exports = router;

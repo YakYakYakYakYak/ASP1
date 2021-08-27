@@ -43,7 +43,14 @@
                          <h5 class="card-title">Hey {{user.name}} welcome back</h5>
                          <p class="card-text">Subject taught: {{user.subject}}</p>
                          <p class ="card-text">Teaching location: {{user.location}}</p>
-                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                         <p class ="card-text">Personal message: {{user.message}}</p>
+                            <form action="/profile" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="message" name = "message">
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Update personal message</button>
+                            </form>                       
                      </div>
                      <div class="card-footer text-muted">
                          bla bla bla
