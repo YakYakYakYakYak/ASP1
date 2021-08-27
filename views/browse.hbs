@@ -20,16 +20,51 @@
     </nav>>
 
     <h2>Filter By:</h2>
-
+{{!-- 
+initial filter button, to be deleted
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('jeremy')"> jeremy</button>
-  <button class="btn" onclick="filterSelection('jerome')"> jerome</button>
-  <button class="btn" onclick="filterSelection('daniel')"> daniel</button>
+  <button class="btn" onclick="filterSelection('maths')"> Maths</button>
+  <button class="btn" onclick="filterSelection('social-studies')"> Social Studies</button>
+  <button class="btn" onclick="filterSelection('north')"> North</button>
 </div>
+ --}}
+ 
+ <button class="btn active" onclick="filterSelection('all')">Show all</button>
+<br>
+<br>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Subject
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><button class="btn" onclick="filterSelection('chemistry')">Chemistry</button></li>
+    <li><button class="btn" onclick="filterSelection('english')">English</button></li>
+    <li><button class="btn" onclick="filterSelection('japanese')">Japanese</button></li>
+    <li><button class="btn" onclick="filterSelection('maths')">Maths</button></li>
+    <li><button class="btn" onclick="filterSelection('social-studies')">Social Studies</button></li>
+  </ul>
+</div>
+<br>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Location
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><button class="btn" onclick="filterSelection('north')">North</button></li>
+    <li><button class="btn" onclick="filterSelection('south')">South</button></li>
+    <li><button class="btn" onclick="filterSelection('east')">East</button></li>
+    <li><button class="btn" onclick="filterSelection('west')">West</button></li>
+    <li><button class="btn" onclick="filterSelection('central')">Central</button></li>
+    
+  </ul>
+</div>
+<br>
 
 {{#each user}}
-    <div class="abc {{name}}">
+    <div class="abc {{subject}} {{location}}">
         <div class="row">
             <div class="col-2">
                 <div class="card">
@@ -64,8 +99,6 @@
 
 
 {{/each}}
-
-
 
     <script>
 filterSelection("all")
