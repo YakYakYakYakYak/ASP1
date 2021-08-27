@@ -73,6 +73,13 @@ nav li a:hover {
 .abc {
     display: none;
     color: black;
+    border-radius: 15px;
+    background: #707070;
+    padding: 20px;
+    width: 1500px;
+    height: 400px;
+    align-items:center;
+    
   }
   
   .show {
