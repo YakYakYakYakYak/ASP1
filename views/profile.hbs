@@ -41,8 +41,16 @@
                      </div>
                      <div class="card-body">
                          <h5 class="card-title">Hey {{user.name}} welcome back</h5>
-                         <p class="card-text">This is your profile page where u can add information about yourself</p>
-                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                         <p class="card-text">Subject taught: {{user.subject}}</p>
+                         <p class ="card-text">Teaching location: {{user.location}}</p>
+                         <p class ="card-text">Personal message: {{user.message}}</p>
+                            <form action="/profile" method="POST">
+                                <div class="form-group">
+                                    <input type="text" placeholder="enter text to update your personal message" class="form-control" id="message" name = "message">
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Update personal message</button>
+                            </form>                       
                      </div>
                      <div class="card-footer text-muted">
                          bla bla bla

@@ -20,14 +20,39 @@
     </nav>>
 
     <h2>Filter By:</h2>
+ 
+ <button class="btn active" onclick="filterSelection('all')">Show all</button>
+<br>
+<br>
 
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('jeremy')"> jeremy</button>
-  <button class="btn" onclick="filterSelection('jerome')"> jerome</button>
-  <button class="btn" onclick="filterSelection('daniel')"> daniel</button>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Subject
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><button class="btn" onclick="filterSelection('chemistry')">Chemistry</button></li>
+    <li><button class="btn" onclick="filterSelection('english')">English</button></li>
+    <li><button class="btn" onclick="filterSelection('japanese')">Japanese</button></li>
+    <li><button class="btn" onclick="filterSelection('maths')">Maths</button></li>
+    <li><button class="btn" onclick="filterSelection('social-studies')">Social Studies</button></li>
+  </ul>
 </div>
+<br>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Location
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><button class="btn" onclick="filterSelection('north')">North</button></li>
+    <li><button class="btn" onclick="filterSelection('south')">South</button></li>
+    <li><button class="btn" onclick="filterSelection('east')">East</button></li>
+    <li><button class="btn" onclick="filterSelection('west')">West</button></li>
+    <li><button class="btn" onclick="filterSelection('central')">Central</button></li>
+    
+  </ul>
+</div>
+<br>
 
 
 <!-- //Trying to do a drop down filter 
@@ -42,8 +67,7 @@
 -->
 
 {{#each user}}
-<div class="box">
-    <div class="abc {{name}}">
+    <div class="abc {{subject}} {{location}}">
         <div class="row">
             <div class="col-2">
                 <div class="card">
@@ -64,9 +88,10 @@
                          Tutor Details
                      </div>
                      <div class="card-body">
-                         <h5 class="card-title">Hey {{user.name}} welcome back</h5>
-                         <p class="card-text">This is your profile page where u can add information about yourself</p>
-                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                         <h5 class="card-title">Name: {{name}}</h5>
+                         <p class="card-text">Subject taught: {{subject}}</p>
+                         <p class ="card-text">Teaching location: {{location}}</p>
+                         <p class ="card-text">Personal message: {{message}}</p>
                      </div>
                      <div class="card-footer text-muted">
                          bla bla bla
@@ -77,9 +102,6 @@
 </div>
 </div>
 {{/each}}
-
-
-
 
     <script>
 filterSelection("all")
