@@ -3,7 +3,7 @@ const path = require("path");
 const mysql = require("mysql");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
-const portNumber = (process.env.PORT || 3000);
+const portNumber = process.env.PORT || 3000;
 
 dotenv.config({ path: './.env'});
 
