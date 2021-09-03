@@ -66,10 +66,4 @@ router.post('/profile', authController.isLoggedIn, (req, res) => {
     })
 });
 
-db.getConnection(function(error, connection) {
-    if (error) throw error; // not connected!
-    connection.destroy();
-    if (error) throw error;
-});
-
 module.exports = router;
