@@ -29,7 +29,7 @@ app.set('view engine', 'hbs');
 
 db.getConnection(function(error, connection) {
     if (error) throw error; // not connected!
-    connection.release();
+    connection.destroy();
     if (error) throw error;
 });
 
