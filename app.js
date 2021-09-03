@@ -9,7 +9,7 @@ dotenv.config({ path: './.env'});
 
 const app = express();
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: process.env.DATABASE_HOST,
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
@@ -27,13 +27,12 @@ app.use(cookieParser());
 
 app.set('view engine', 'hbs');
 
-db.connect( (error) => {
-    if(error) {
-        console.log(error)
-    } else {
-        console.log("MYSQL Connected...")
-    }
-})
+db.getConnection(function(error, connection) {
+    if (error) throw error; // not connected!
+    connection.release();
+    if (error) throw error;
+});
+
 //Define routes
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes//auth'));

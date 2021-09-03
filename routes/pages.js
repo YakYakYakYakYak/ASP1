@@ -3,7 +3,7 @@ const authController = require('../controllers/auth');
 const router = express.Router();
 const mysql = require("mysql");
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: process.env.DATABASE_HOST,
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
@@ -64,6 +64,12 @@ router.post('/profile', authController.isLoggedIn, (req, res) => {
                 return res.redirect('profile');
         }
     })
+});
+
+db.getConnection(function(error, connection) {
+    if (error) throw error; // not connected!
+    connection.release();
+    if (error) throw error;
 });
 
 module.exports = router;
