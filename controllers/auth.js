@@ -22,6 +22,7 @@ exports.login = async (req, res) => {
 
         db.query('SELECT * FROM users WHERE email = ?', [email], async (error, results) => {
            console.log(results);
+             
             if( !results || !(await bcrypt.compare(password, results[0].password)) ) {
                 res.status(401).render('login', {
                     message: 'Email or Password is incorrect'
@@ -45,6 +46,14 @@ exports.login = async (req, res) => {
                 res.status(200).redirect('/');
             }
         })
+
+        db.query('SELECT email FROM users WHERE email ="' + mysql.escape(email) +'"', function (err, results) {
+            if (err) throw err;
+            console.log(results);
+            res.status(401).render('login', {
+                message: 'That account does not exist'
+            })
+        });
 
     } catch (error) {
         console.log(error)
