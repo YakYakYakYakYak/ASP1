@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <h4><a href="/">EduMatch</a></h4>
     <nav>
@@ -27,42 +30,48 @@
                 <form action="/auth/register" method="POST">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name = "name" required>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name = "email" required>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name = "password" required>
+                        <input type="password" class="form-control" id="password" name="password"
+                            pattern="(?=.*?[A-Z])(?=.*?[0-9]).{8,}"
+                            title="Password must consist of at least eight characters, an uppercase letter and a digit"
+                            required>
                     </div>
 
                     <div class="form-group">
                         <label for="passwordConfirm" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="passwordConfirm" name = "passwordConfirm" required>
+                        <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                            pattern="(?=.*?[A-Z])(?=.*?[0-9]).{8,}"
+                            title="Password must consist of at least eight characters, an uppercase letter and a digit"
+                            required>
                     </div>
                     <br>
                     <label for="subject">Choose Subject to teach:</label>
                     <select name="subject" id="subject">
                         <optgroup label="Subjects">
-                        <option value="chemistry">Chemistry</option>
-                        <option value="english">English</option>
-                        <option value="japanese">Japanese</option>
-                        <option value="maths">Maths</option>
-                        <option value="social-studies">Social Studies</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="english">English</option>
+                            <option value="japanese">Japanese</option>
+                            <option value="maths">Maths</option>
+                            <option value="social-studies">Social Studies</option>
                         </optgroup>
                     </select>
                     <label for="location">Nearest location</label>
                     <select name="location" id="location">
                         <optgroup label="Locations">
-                        <option value="north">North</option>
-                        <option value="south">South</option>
-                        <option value="east">East</option>
-                        <option value="west">West</option>
-                        <option value="central">Central</option>
+                            <option value="north">North</option>
+                            <option value="south">South</option>
+                            <option value="east">East</option>
+                            <option value="west">West</option>
+                            <option value="central">Central</option>
                         </optgroup>
                     </select>
                     <br>
@@ -70,14 +79,17 @@
                     <button type="submit" class="btn btn-primary">Register user</button>
                 </form>
 
-  </div>
-</div>
+            </div>
+        </div>
 
-{{#if message }}
-<h4 class="alert alert-danger mt-4">{{message}}</h4>
-{{/if}}
+        {{#if message }}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
