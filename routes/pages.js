@@ -66,4 +66,20 @@ router.post('/profile', authController.isLoggedIn, (req, res) => {
     })
 });
 
+router.post('/browse', authController.isLoggedIn, (req, res) => {
+    const id = req.body.recipientName;
+    const review = req.body.messageText;
+    console.log('testing!');
+    console.log(id);
+    console.log(review);
+    db.query("UPDATE users SET review = ? WHERE id = ?", [review, id], (error, result) => {
+        if(error) {
+            console.log(error)
+        } else {
+            console.log(result);
+                return res.redirect('browse');
+        }
+    })
+});
+
 module.exports = router;

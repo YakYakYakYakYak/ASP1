@@ -116,3 +116,7 @@ nav li a:hover {
        margin:100px auto;
        border:10px;
        background-color: #797675;}
+
+    .card-body-main {
+       height:300px; 
+    }
