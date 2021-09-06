@@ -69,10 +69,12 @@ router.post('/profile', authController.isLoggedIn, (req, res) => {
 router.post('/browse', authController.isLoggedIn, (req, res) => {
     const id = req.body.recipientName;
     const review = req.body.messageText;
+    const rating = req.body.rating;
     console.log('testing!');
+    console.log(rating);
     console.log(id);
     console.log(review);
-    db.query("UPDATE users SET review = ? WHERE id = ?", [review, id], (error, result) => {
+    db.query("UPDATE users SET review = ?, rating = ((rating + ?) / (ratingCount + 1)), ratingCount = ratingCount + 1 WHERE id = ?", [review, rating, id], (error, result) => {
         if(error) {
             console.log(error)
         } else {

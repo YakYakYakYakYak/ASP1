@@ -71,7 +71,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{name}}</h5>
                 <p class="card-text">Rating: {{rating}}/5</p>
-                <p class="card-text2">Latest review: {{review}}</p>
+                <p class="card-text">No. of reviews: {{ratingCount}}</p>
                 <a href="#" class="btn btn-primary">{{email}}</a>
             </div>
             </div>
@@ -90,9 +90,7 @@
                          <p class ="card-text">Latest review message: {{review}}</p>
 
                          <!--test-->
-                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{id}}">Leave review for {{name}}</button>
-                          <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>-->
-                          <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>-->
+                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{id}}">Leave review and ratings for {{name}}</button>                       
 
                           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
@@ -100,8 +98,18 @@
                                 <div class="modal-header">
                                 </div>
                                 <div class="modal-body">
-                                  <form actuin ="/browse" method="POST">
+                                  <form action ="/browse" method="POST">
                                     <div class="form-group">
+                                      <label for="rating">Rating out of 5:</label>
+                                        <select name="rating" id="rating">
+                                            <optgroup label="Ratings">
+                                                <option value=1>1</option>
+                                                <option value=2>2</option>
+                                                <option value=3>3</option>
+                                                <option value=4>4</option>
+                                                <option value=5>5</option>
+                                            </optgroup>
+                                        </select>
                                       <input type="hidden" class="form-control" id="recipientName" name="recipientName">
                                     </div>
                                     <div class="form-group">
