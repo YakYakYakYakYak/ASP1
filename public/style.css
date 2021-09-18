@@ -5,7 +5,7 @@ body {
     background-color: rgb(237, 237, 237);
 }
 h4 {
-    color: rgb(19,65,225);
+    color: rgba(2, 117, 37, 0.808);
     font-family: Poppins;
     font-size:3vw;
     text-align: center; 
@@ -18,7 +18,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: rgb(19,65,225);
+    color: rgba(2, 117, 37, 0.808);
 }
 
 a:hover {
@@ -30,7 +30,7 @@ p {
 }
 
 nav {
-    background-color: rgb(19,65,225);
+    background-color: rgba(2, 117, 37, 0.808);
     color: #fff;
     padding: 20px;
     display: flex;
@@ -100,11 +100,11 @@ nav li a:hover {
   }
   
   .btn:hover {
-    background-color: rgb(19,65,225);
+    background-color: rgb(2, 117, 37, 0.808);
   }
   
   .btn.active {
-    background-color: rgb(19,65,225);
+    background-color: rgb(2, 117, 37, 0.808);
     color: white;
   }
 
@@ -126,3 +126,11 @@ nav li a:hover {
         width: 80%;
         padding: 10px;
       }
+
+    .btn-primary{
+    background-color: rgba(2, 117, 37, 0.808);
+  }
+
+    .btn-primary:hover{
+        background-color: rgba(3, 177, 55, 0.808);
+    }
