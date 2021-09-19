@@ -34,11 +34,16 @@
     Subject
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><button class="btn" onclick="filterSelection('chemistry')">Chemistry</button></li>
-    <li><button class="btn" onclick="filterSelection('english')">English</button></li>
-    <li><button class="btn" onclick="filterSelection('japanese')">Japanese</button></li>
-    <li><button class="btn" onclick="filterSelection('maths')">Maths</button></li>
-    <li><button class="btn" onclick="filterSelection('social-studies')">Social Studies</button></li>
+    <li><button class="btn" onclick="filterSelection('Teach chemistry')">Teach Chemistry</button></li>
+    <li><button class="btn" onclick="filterSelection('Teach english')">Teach English</button></li>
+    <li><button class="btn" onclick="filterSelection('Teach japanese')">Teach Japanese</button></li>
+    <li><button class="btn" onclick="filterSelection('Teach maths')">Teach Maths</button></li>
+    <li><button class="btn" onclick="filterSelection('Teach social-studies')">Teach Social Studies</button></li>
+    <li><button class="btn" onclick="filterSelection('Learn chemistry')">Learn Chemistry</button></li>
+    <li><button class="btn" onclick="filterSelection('Learn english')">Learn English</button></li>
+    <li><button class="btn" onclick="filterSelection('Learn japanese')">Learn Japanese</button></li>
+    <li><button class="btn" onclick="filterSelection('Learn maths')">Learn Maths</button></li>
+    <li><button class="btn" onclick="filterSelection('Learn social-studies')">Learn Social Studies</button></li>
   </ul>
 </div>
 <br>
@@ -48,11 +53,11 @@
     Location
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><button class="btn" onclick="filterSelection('north')">North</button></li>
-    <li><button class="btn" onclick="filterSelection('south')">South</button></li>
-    <li><button class="btn" onclick="filterSelection('east')">East</button></li>
-    <li><button class="btn" onclick="filterSelection('west')">West</button></li>
-    <li><button class="btn" onclick="filterSelection('central')">Central</button></li>
+    <li><button class="btn" onclick="filterSelection('North')">North</button></li>
+    <li><button class="btn" onclick="filterSelection('South')">South</button></li>
+    <li><button class="btn" onclick="filterSelection('East')">East</button></li>
+    <li><button class="btn" onclick="filterSelection('West')">West</button></li>
+    <li><button class="btn" onclick="filterSelection('Central')">Central</button></li>
     
   </ul>
 </div>
@@ -83,8 +88,8 @@
                      </div>
                      <div class="card-body-main">
                          <h5 class="card-title">Name: {{name}}</h5>
-                         <p class="card-text">Subject taught: {{subject}}</p>
-                         <p class ="card-text">Teaching location: {{location}}</p>
+                         <p class="card-text">Seeking to: {{subject}}</p>
+                         <p class ="card-text">Location: {{location}}</p>
                          <p class ="card-text">Personal message: {{message}}</p>
                          <p class ="card-text">Latest review message: {{review}}</p>
 
