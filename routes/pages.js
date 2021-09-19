@@ -74,7 +74,7 @@ router.post('/browse', authController.isLoggedIn, (req, res) => {
     console.log(rating);
     console.log(id);
     console.log(review);
-    db.query("UPDATE users SET review = ?, rating = ROUND((rating + ?) / (ratingCount + 1),2), ratingCount = ratingCount + 1 WHERE id = ?", [review, rating, id], (error, result) => {
+    db.query("UPDATE users SET review = ?, rating = ROUND((totalSum + ?) / (ratingCount + 1),2), ratingCount = ratingCount + 1, totalSum = (totalSum + ?) WHERE id = ?", [review, rating, rating, id], (error, result) => {
         if(error) {
             console.log(error)
         } else {
