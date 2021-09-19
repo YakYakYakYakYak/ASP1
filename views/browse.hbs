@@ -88,10 +88,23 @@
                          <p class ="card-text">Personal message: {{message}}</p>
                          <p class ="card-text">Latest review message: {{review}}</p>
 
-                         <!--test-->
+                         <!--modal button-->
                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{id}}">Leave review and ratings for {{name}}</button>                       
+                         <!--end modal button-->
+                     </div>
+                     <div class="card-footer text-muted">
+                       
+                     </div>
+                     
+                 </div>
+            </div>
+        </div>    
+</div>
 
-                          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<br><br>
+{{/each}}
+<!--modal body-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                 <div class="modal-header">
@@ -125,20 +138,8 @@
                               </div>
                             </div>
                           </div>
-                         <!--test-->
-                     </div>
-                     <div class="card-footer text-muted">
-                       
-                     </div>
-                     
-                 </div>
-            </div>
-        </div>    
 </div>
-
-<br><br>
-{{/each}}
-</div>
+<!--modal body end-->
     <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -192,5 +193,6 @@ for (var i = 0; i < btns.length; i++) {
   })
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
 </body>
 </html>
