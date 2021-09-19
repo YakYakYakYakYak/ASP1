@@ -73,7 +73,7 @@
                         <img src="/system-users-icon.png" class="avatar" alt="user profile picture".>
                     </div>
             <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>
+                <h5 class="card-title">{{toUpperCase name}}</h5>
                 <p class="card-text">Rating: {{rating}}/5</p>
                 <p class="card-text">Number of reviews: {{ratingCount}}</p>
                 <a href="#" class="btn btn-primary">{{email}}</a>
@@ -84,10 +84,11 @@
           <div class="col-10">
                  <div class="card text-center">
                      <div class="card-header">
-                         Tutor Details
+                         User Details
                      </div>
                      <div class="card-body-main">
-                         <h5 class="card-title">Name: {{name}}</h5>
+                       <br>
+                         <h5 class="card-title">Name: {{toUpperCase name}}</h5>
                          <p class="card-text">Seeking to: {{subject}}</p>
                          <p class ="card-text">Location: {{location}}</p>
                          <p class ="card-text">Personal message: {{message}}</p>

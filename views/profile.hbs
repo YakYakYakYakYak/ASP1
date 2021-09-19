@@ -29,7 +29,7 @@
                         <img src="/system-users-icon.png" class="avatar" alt="user profile picture".>
                     </div>
             <div class="card-body">
-                <h5 class="card-title">{{user.name}}</h5>
+                <h5 class="card-title">{{toUpperCase user.name}}</h5>
                 <p class="card-text">Rating: {{user.rating}}/5</p>
                 <p class="card-text">Number of reviews: {{user.ratingCount}}</p>
                 <a href="#" class="btn btn-primary">{{user.email}}</a>
@@ -43,7 +43,7 @@
                          Profile Page
                      </div>
                      <div class="card-body">
-                         <h5 class="card-title">Hey {{user.name}}, Welcome back</h5>
+                         <h5 class="card-title">Hey {{toUpperCase user.name}}, Welcome back</h5>
                          <p class="card-text">Seeking to: {{user.subject}}</p>
                          <p class ="card-text">Location: {{user.location}}</p>
                          <p class ="card-text">Personal message: {{user.message}}</p>

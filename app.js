@@ -27,6 +27,14 @@ app.use(cookieParser());
 
 app.set('view engine', 'hbs');
 
+var hbs = require('hbs');
+hbs.registerHelper('toUpperCase', function(str) {
+    str = str.toLowerCase()
+    .split(' ')
+    .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ');
+    return str;
+});
 
 //Define routes
 app.use('/', require('./routes/pages'));
@@ -35,3 +43,5 @@ app.use('/auth', require('./routes//auth'));
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server started on port: " + portNumber);
 })
+
+module.exports = hbs;
