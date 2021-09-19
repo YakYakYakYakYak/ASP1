@@ -10,18 +10,6 @@ const db = mysql.createPool({
     database: process.env.DATABASE
 });
 
-db.query ('UPDATE users SET name = CONCAT(UCASE(LEFT(name, 1)), LCASE(SUBSTRING(name, 2)))'), (error, results) => {
-    console.log(results);
-}
-
-db.query ('UPDATE users SET subject = CONCAT(UCASE(LEFT(subject, 1)), LCASE(SUBSTRING(subject, 2)))'), (error, results) => {
-    console.log(results);
-}
-
-db.query ('UPDATE users SET location = CONCAT(UCASE(LEFT(location, 1)), LCASE(SUBSTRING(location, 2)))'), (error, results) => {
-    console.log(results);
-}
-
 exports.login = async (req, res) => {
     try {
         const { email, password} = req.body;
