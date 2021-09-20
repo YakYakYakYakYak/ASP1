@@ -103,7 +103,7 @@
                          <p class ="card-text">Latest review message: {{review}}</p>
 
                          <!--modal button-->
-                         <button type="button" id="leaveReviewBt" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{id}}">Leave review and ratings for {{toUpperCase name}}</button>                       
+                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{id}}">Leave review and ratings for {{toUpperCase name}}</button>                       
                          <!--end modal button-->
                      </div>
                      <div class="card-footer text-muted">
@@ -200,13 +200,16 @@ for (var i = 0; i < btns.length; i++) {
 </script>
 
 <script type="text/javascript">
-    //Disable review submit button if user never writes any text in the message box
     function EnableDisable(messageText) {
+        //Reference the Button.
         var btnSubmit = document.getElementById("reviewSubmit");
  
+        //Verify the TextBox value.
         if (messageText.value.trim() != "") {
+            //Enable the TextBox when TextBox has value.
             reviewSubmit.disabled = false;
         } else {
+            //Disable the TextBox when TextBox is empty.
             reviewSubmit.disabled = true;
         }
     };
