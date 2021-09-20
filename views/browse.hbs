@@ -140,11 +140,11 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="message-text" class="col-form-label">Review:</label>
-                                      <textarea class="form-control" id="messageText" name="messageText"></textarea>
+                                      <textarea class="form-control" id="messageText" name="messageText" onkeyup="EnableDisable(this)" placeholder="Write a review!" ></textarea>
                                     </div>
                                     <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="submit" class="btn btn-primary">Send message</button>
+                                  <button type="submit" class="btn btn-primary" id="reviewSubmit" disabled="disabled">Send message</button>
                                 </div>
                                   </form>
                                 </div>
@@ -198,6 +198,23 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
+
+<script type="text/javascript">
+    function EnableDisable(messageText) {
+        //Reference the Button.
+        var btnSubmit = document.getElementById("reviewSubmit");
+ 
+        //Verify the TextBox value.
+        if (messageText.value.trim() != "") {
+            //Enable the TextBox when TextBox has value.
+            reviewSubmit.disabled = false;
+        } else {
+            //Disable the TextBox when TextBox is empty.
+            reviewSubmit.disabled = true;
+        }
+    };
+</script>
+
 <script>
   $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
